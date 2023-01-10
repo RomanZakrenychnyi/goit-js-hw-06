@@ -16,10 +16,10 @@ const images = [
 const imgGallery = document.querySelector('.gallery'); //связали ul с js
 
 images.forEach(el => {
-  imgGallery.insertAdjacentHTML('beforeend', `<li><img src = "${el.url}" alt = "${el.alt}" width = 600/></li>`)
+  imgGallery.insertAdjacentHTML('beforeend', `<li><img src = "${el.url}" alt = "${el.alt}" width = 480 height = 300/></li>`)
 }) //перебор с добавлением <li><img.../>
 
-imgGallery.setAttribute("style", "list-style: none; display: flex; flex-wrap: wrap;"); //добавление классов через setAttribute
+imgGallery.setAttribute("style", "list-style: none; display: flex; flex-wrap: wrap; justifyContent: center; gap: 10px;"); //добавление классов через setAttribute
 
 
 // imgGallery.insertAdjacentHTML(
