@@ -8,28 +8,35 @@
 const totalCategories = document.querySelectorAll('.item');//['li1 и все его наполенние', 'li2 и все его наполенние', 'li3 и все его наполенние']
 console.log(`Number of categories: ${totalCategories.length}`);
 
-totalCategories.forEach((item) => {
-    const title = item.querySelector('h2').textContent
+totalCategories.forEach((i) => {
+    const title = i.querySelector('h2').textContent
     console.log(`Category: ${title}`)
-    const element = item.querySelectorAll('li').length
+    const element = i.querySelectorAll('li').length
     console.log(`Elements: ${element}`)
-})   
+})
+
+
+
+
+
 
 // const listElements = document.querySelectorAll('.item>ul');
 // console.log(listElements)
 
-// const firstTitle = document.querySelector('.item>h2').textContent;
+// const firstTitle = document.querySelector('li>h2').textContent;
 // console.log(`Category: ${firstTitle}`);
 
 // const firstElement = listElements[0]
 // console.log(`${firstElement}`)
 
-
-// const secondTitle = totalCategories[1].querySelector('.item>h2').textContent;
+// const secondTitle = totalCategories[1].querySelector('li>h2').textContent;
 // console.log(`Category: ${secondTitle}`);
 
-// const thirdTitle = totalCategories[2].querySelector('.item>h2').textContent;
+// const thirdTitle = totalCategories[2].querySelector('li>h2').textContent;
 // console.log(`Category: ${thirdTitle}`);
+
+
+
 
 
 // const title1 = totalCategories[0]
