@@ -6,3 +6,10 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+const listIngredients = document.querySelector('#ingredients');
+
+const list = ingredients.reduce(
+    (str, item) => str + `<li>${item}</li>`, '');
+
+ulEl.innerHTML = list;
