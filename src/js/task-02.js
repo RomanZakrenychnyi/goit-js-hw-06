@@ -16,15 +16,14 @@ const ingredients = [
   'Condiments',
 ];
 
-// get DOM element
-const ulElement = document.querySelector('#ingredients');
+const ulElement = document.querySelector('#ingredients'); //связали ul с js
 
-const list = ingredients.map(el => {
-  const liEl = document.createElement('li');
-  liEl.textContent = el;
+const list = ingredients.map(el => { //создали переменную list и присвоили ей ссылку на функцию, с методом перебора через callback функцию map
+  const liEl = document.createElement('li'); //создали li и вложили ее в переменную
+  liEl.textContent = el; //сделали так что бы каждую итерацию эдлемент массива выводился текстом
   return liEl
 })
-ulElement.append(...list)
+ulElement.append(...list) //подключили к ul наши li с текстом масива ingredients
 console.log(ulElement)
 
 

@@ -12,3 +12,18 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const imgGallery = document.querySelector('.gallery'); //связали ul с js
+
+images.forEach(el => {
+  imgGallery.insertAdjacentHTML('beforeend', `<li><img src = "${el.url}" alt = "${el.alt}" width = 600/></li>`)
+}) //перебор с добавлением <li><img.../>
+
+imgGallery.setAttribute("style", "list-style: none; display: flex; flex-wrap: wrap;"); //добавление классов через setAttribute
+
+
+// imgGallery.insertAdjacentHTML(
+//   'beforeend',
+//   `<li><img src = "${images[0].url}" alt = "${images[0].alt}" width = 600/></li>
+//   <li><img src = "${images[1].url}" alt = "${images[1].alt}" width = 600/></li>
+//   <li><img src = "${images[2].url}" alt = "${images[2].alt}" width = 600/></li>`)
