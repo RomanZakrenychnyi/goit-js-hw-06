@@ -15,11 +15,15 @@ const images = [
 
 const imgGallery = document.querySelector('.gallery'); //связали ul с js
 
-images.forEach(el => {
-  imgGallery.insertAdjacentHTML('beforeend', `<li><img src = "${el.url}" alt = "${el.alt}" width = 480 height = 300/></li>`)
-}) //перебор с добавлением <li><img.../>
+const iteration = images
+  .map(img => `<li><img src = "${img.url}" alt = "${img.alt}" width = 480 height = 300/></li>`)
+  .join(' ');
 
-imgGallery.setAttribute("style", "list-style: none; display: flex; flex-wrap: wrap; justifyContent: center; gap: 10px;"); //добавление классов через setAttribute
+imgGallery.insertAdjacentHTML('beforeend', iteration);
+  
+imgGallery.setAttribute("style", "list-style: none; display: flex; flex-wrap: wrap; justifyContent: center; gap: 10px;"); 
+
+imgGallery.style = `list-style: none; display: flex; flex-wrap: wrap; justifyContent: center; gap: 10px;`
 
 
 // imgGallery.insertAdjacentHTML(
