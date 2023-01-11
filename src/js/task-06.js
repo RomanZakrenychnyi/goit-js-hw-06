@@ -21,22 +21,21 @@ const dataLength = input.getAttribute('data-length')
 console.log(dataLength)
 
 input.addEventListener('blur', event => {
-    const text = event.target.value.length
+  const text = event.target.value.length
 
-  if (text < dataLength || text > dataLength) {
-    input.classList.remove('valid');
-    input.classList.add('invalid');
-  } else {
-    input.classList.remove('invalid');
-    input.classList.add('valid');
-  }
-});
+    if (text < dataLength || text > dataLength) {
+      input.classList.remove('valid');
+      input.classList.add('invalid');
+    } else {
+      input.classList.add('valid');
+      input.classList.remove('invalid');
+    }
+  });
 
-//     if (text === dataLength) {
-//         input.classList.add('valid');
-//         input.classList.remove('invalid');
-//     } else {
-//         input.classList.add('invalid')
-//         input.classList.remove('valid');
-//     }
-// })
+//   if (text == dataLength) {
+//     input.classList.add('valid');
+//     input.classList.remove('invalid');
+//   } else {
+//     input.classList.add('invalid')
+//   }
+// });
