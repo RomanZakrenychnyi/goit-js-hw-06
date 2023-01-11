@@ -6,7 +6,12 @@ function getRandomHexColor() {
 // и выводит значение цвета в span.color.
 
 const btnChangeColor = document.querySelector('.change-color')
+const body = document.querySelector('body')
+const spanColor = document.querySelector('.color')
 
 btnChangeColor.addEventListener('click', handleClick => {
-  let color = getRandomHexColor()
+  const color = getRandomHexColor()
+  body.style.backgroundColor = color
+  console.log(spanColor.textContent = color)
 })
+
