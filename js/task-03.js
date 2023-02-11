@@ -13,17 +13,53 @@ const images = [
   },
 ];
 
-const imgGallery = document.querySelector('.gallery'); //связали ul с js
+const listEl = document.querySelector('.gallery')
 
-const iteration = images
-  .map(img => `<li><img src = "${img.url}" alt = "${img.alt}" width = 480 height = 300/></li>`)
-  .join(' ');
+const handlerListAppend = (({url, alt}) => {
+  const listItemEl = document.createElement('li');
+  const imgListEl = document.createElement('img');
+  imgListEl.url = url;
+  imgListEl.alt = alt;
+  listItemEl.append(imgListEl)
+  return listItemEl;
+})
 
-imgGallery.insertAdjacentHTML('beforeend', iteration);
+  console.log(listEl)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const imgGallery = document.querySelector('.gallery'); //связали ul с js
+
+// const iteration = images
+//   .map(img => `<li><img src = "${img.url}" alt = "${img.alt}" width = 480 height = 300/></li>`)
+//   .join(' ');
+
+// imgGallery.insertAdjacentHTML('beforeend', iteration);
   
-imgGallery.setAttribute("style", "list-style: none; display: flex; flex-wrap: wrap; justifyContent: center; gap: 10px;"); 
+// imgGallery.setAttribute("style", "list-style: none; display: flex; flex-wrap: wrap; justifyContent: center; gap: 10px;"); 
 
-imgGallery.style = `list-style: none; display: flex; flex-wrap: wrap; justifyContent: center; gap: 10px;`
+// imgGallery.style = `list-style: none; display: flex; flex-wrap: wrap; justifyContent: center; gap: 10px;`
 
 
 // imgGallery.insertAdjacentHTML(
