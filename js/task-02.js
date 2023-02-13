@@ -9,10 +9,13 @@ const ingredients = [
 
 const listEl = document.querySelector('ul');
 
-const handlerListItemEl = ingredients.map(ingredient => {
-    const listItemEl = document.createElement('li');
-    listItemEl.classList = 'item';
-    listItemEl.textContent = ingredient;
-    listEl.append(listItemEl)
-  }
+const handleCreatItemEl = ingredients.map(ingredient => {
+  const listItemEl = document.createElement('li');
+  listItemEl.textContent = ingredient;
+  listItemEl.classList.add('item');
+  return listItemEl
+}
 );
+
+listEl.append(...handleCreatItemEl)
+
