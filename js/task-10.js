@@ -17,21 +17,20 @@ const creatBoxEl = btnCreatEl.addEventListener('click', event => {
   boxColectionEl.innerHTML = '';
   const inputValueEl = creatNumberOfBoxes();
   let boxSize = 20;
-  const box = document.createElement('div');
 
   for (let i = 0; i < inputValueEl; i += 1) {
     const randomColor = getRandomHexColor();
+    const box = document.createElement('div');
     boxSize += 10;
     if (inputValueEl === 0) {
       return;
     }
     
     box.style.cssText = `width: ${boxSize}px; height: ${boxSize}px; background: ${randomColor}; margin-top: 10px`
+    boxColectionEl.append(box)
     console.log(box);
   }
 })
-
-boxColectionEl.append(box)
 
 btnDestroyEl.addEventListener('click', () => {
   boxColectionEl.innerHTML = '';
