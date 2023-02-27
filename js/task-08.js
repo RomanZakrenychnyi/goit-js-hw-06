@@ -4,16 +4,19 @@ const formEl = document.querySelector('form');
 formEl.addEventListener('submit', event => {
     event.preventDefault();
 
-    if(event.target.email.value === '' || event.target.password.value === '') {
+    const inputValue = event.target;
+
+    if (inputValue.email.value === '' || inputValue.password.value === '') {
         alert('Усі поля мають бути заповненні!')
+        return;
     }
 
     const elements = {
-        email: event.target.email.value,
-        password: event.target.password.value
+        email: inputValue.email.value,
+        password: inputValue.password.value
     }
 
     console.log(elements);
 
-    event.target.reset();
+    inputValue.reset();
 })
