@@ -19,8 +19,8 @@ const creatListItemEls = images.map(({ url, alt }) => `
   <li class = ''>
   <img src = ${url} alt = ${alt} width = 480px>
   </li>`
-)
+).join('');
 
-listEl.insertAdjacentHTML('afterbegin', creatListItemEls)
+listEl.insertAdjacentHTML('beforeend', creatListItemEls);
 
 listEl.style = `list-style: none; display: flex; flex-wrap: wrap; justifyContent: center; gap: 10px;`
