@@ -1,14 +1,14 @@
 const textAreaInput = document.querySelector('#validation-input');
 
-textAreaInput.addEventListener('blur', event => {
-  const text = event.target;
-  const checkNumber = text.dataset.length;
-  console.log(text.value.length)
+textAreaInput.addEventListener('blur', ({target}) => {
+  const checkNumber = target.dataset.length;
+  console.log(target.value.length)
   
-  if (text.value.length == checkNumber) {
-    event.target.classList.add('valid');
-    event.target.classList.remove('invalid');
+  if (target.value.length == checkNumber) {
+    target.classList.add('valid');
+    target.classList.remove('invalid');
   } else {
-    event.target.classList.add('invalid');
+    target.classList.add('invalid');
+    target.classList.remove('valid');
     }
 })
