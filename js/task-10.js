@@ -9,13 +9,13 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-const creatNumberOfBoxes = () => {
+const getNumberOfBoxes = () => {
    return +(inputEl.value)
 }
 
-const creatBoxEl = btnCreatEl.addEventListener('click', event => {
-  boxColectionEl.innerHTML = '';
-  const inputValueEl = creatNumberOfBoxes();
+const creatBoxEl = btnCreatEl.addEventListener('click', () => {
+  // boxColectionEl.innerHTML = '';
+  const inputValueEl = getNumberOfBoxes();
   let boxSize = 20;
 
   for (let i = 0; i < inputValueEl; i += 1) {
